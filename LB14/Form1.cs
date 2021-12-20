@@ -80,7 +80,7 @@ namespace LB14
                 }
                 listBox2.Items.Add("array[" + i + "] = " + array[i].ToString());
             }
-            MessageBox.Show("Индекс элемента: " + IndexOf(ref array, findValue, 0, array.Length - 1).ToString());
+            MessageBox.Show("Индекс элемента: " + IndexOf(ref array, findValue, 0, array.Length - 1).ToString() + "; Количество итераций: " + count + ".");
         }
     }
 }
