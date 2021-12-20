@@ -48,18 +48,18 @@ namespace LB14
             }
         }
 
-        private int IndexOf(ref int[] Array, int Value, int Left, int Right)
+        private int IndexOf(ref int[] array, int findValue, int Left, int Right)
         {
             int x = (Left + Right) / 2;
             count++;
-            if (Array[x] == Value)
+            if (array[x] == findValue)
                 return x;
             if ((x == Left) || (x == Right))
                 return -1;
-            if (Array[x] < Value)
-                return IndexOf(ref Array, Value, x, Right);
+            if (array[x] < findValue)
+                return IndexOf(ref array, findValue, x, Right);
             else
-                return IndexOf(ref Array, Value, Left, x);
+                return IndexOf(ref array, findValue, Left, x);
         }
 
         private void button2_Click(object sender, EventArgs e)
